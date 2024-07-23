@@ -39,220 +39,10 @@ buttons.forEach(button => {
 
 function aiexecute(v) {
     if (!wingamer) {
-
-
         let k = true;
         let g = true;
         let r = true;
-       /*  for (let e = 0; e < winningCombinations.length; e++) {
-            let i = winningCombinations[e];
-            if (v[i[0]] == 0 && v[i[1]] == 0 && v[i[2]] == 2) {
-                game[i[0]] = 2;
-                buttons[i[0]].style.backgroundImage = 'url(./images/tic.png)';
-                buttons[i[0]].style.backgroundSize = 'cover';
-                playerTwo = false;
-                playerOne = true;
-                playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                wingame(game);
-                k = false;
-                g = false;
-                r = false;
-                break;
-
-            } else if (v[i[0]] == 0 && v[i[1]] == 0 && v[i[2]] == 2) {
-                game[i[1]] = 2;
-                buttons[i[1]].style.backgroundImage = 'url(./images/tic.png)';
-                buttons[i[1]].style.backgroundSize = 'cover';
-                playerTwo = false;
-                playerOne = true;
-                playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                wingame(game);
-                k = false;
-                g = false;
-                r = false;
-                break;
-
-            } else if (v[i[0]] == 0 && v[i[1]] == 0 && v[i[2]] == 2) {
-                game[i[2]] = 2;
-                buttons[i[2]].style.backgroundImage = 'url(./images/tic.png)';
-                buttons[i[2]].style.backgroundSize = 'cover';
-                playerTwo = false;
-                playerOne = true;
-                playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                wingame(game);
-                k = false;
-                g = false;
-                r = false;
-                break;
-            }} */
-                for (let e = 0; e < winningCombinations.length; e++) {
-                    let i = winningCombinations[e];
-    
-                    if (v[i[0]] == 0 && v[i[1]] == 1 && v[i[2]] == 1) {
-                        game[i[0]] = 2;
-                        buttons[i[0]].style.backgroundImage = 'url(./images/tic.png)';
-                        buttons[i[0]].style.backgroundSize = 'cover';
-                        playerTwo = false;
-                        playerOne = true;
-                        playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                        wingame(game);
-                        k = false;
-                        g = false;
-                        r = false;
-                        break;
-        
-                    } else if (v[i[0]] == 1 && v[i[1]] == 0 && v[i[2]] == 1) {
-                        game[i[1]] = 2;
-                        buttons[i[1]].style.backgroundImage = 'url(./images/tic.png)';
-                        buttons[i[1]].style.backgroundSize = 'cover';
-                        playerTwo = false;
-                        playerOne = true;
-                        playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                        wingame(game);
-                        k = false;
-                        g = false;
-                        r = false;
-                        break;
-        
-                    } else if (v[i[0]] == 1 && v[i[1]] == 1 && v[i[2]] == 0) {
-                        game[i[2]] = 2;
-                        buttons[i[2]].style.backgroundImage = 'url(./images/tic.png)';
-                        buttons[i[2]].style.backgroundSize = 'cover';
-                        playerTwo = false;
-                        playerOne = true;
-                        playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                        wingame(game);
-                        k = false;
-                        g = false;
-                        r = false;
-                        break;
-                    }
-            }
-
-        if(r){
- /*            for (let e = 0; e < winningCombinations.length; e++) {
-                let i = winningCombinations[e];
-                if (v[i[0]] == 0 && v[i[1]] == 2 && v[i[2]] == 2) {
-                    game[i[0]] = 2;
-                    buttons[i[0]].style.backgroundImage = 'url(./images/tic.png)';
-                    buttons[i[0]].style.backgroundSize = 'cover';
-                    playerTwo = false;
-                    playerOne = true;
-                    playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                    wingame(game);
-                    k = false;
-                    g = false
-                    break;
-    
-                } else if (v[i[0]] == 2 && v[i[1]] == 0 && v[i[2]] == 2) {
-                    game[i[1]] = 2;
-                    buttons[i[1]].style.backgroundImage = 'url(./images/tic.png)';
-                    buttons[i[1]].style.backgroundSize = 'cover';
-                    playerTwo = false;
-                    playerOne = true;
-                    playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                    wingame(game);
-                    k = false;
-                    g = false
-                    break;
-    
-                } else if (v[i[0]] == 2 && v[i[1]] == 2 && v[i[2]] == 0) {
-                    game[i[2]] = 2;
-                    buttons[i[2]].style.backgroundImage = 'url(./images/tic.png)';
-                    buttons[i[2]].style.backgroundSize = 'cover';
-                    playerTwo = false;
-                    playerOne = true;
-                    playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                    wingame(game);
-                    k = false;
-                    g = false
-                    break;
-                }} */
-                    for (let e = 0; e < winningCombinations.length; e++) {
-                        let i = winningCombinations[e];
-                        if (v[i[0]] == 0 && v[i[1]] == 0 && v[i[2]] == 2) {
-                            const k = [i[0], i[1]];
-                            const randomChoice = k[Math.floor(Math.random() * k.length)];
-                            game[randomChoice] = 2;
-                            buttons[randomChoice].style.backgroundImage = 'url(./images/tic.png)';
-                            buttons[randomChoice].style.backgroundSize = 'cover';
-                            playerTwo = false;
-                            playerOne = true;
-                            playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                            wingame(game);
-                            k = false;
-                            g = false
-                            break;
-            
-                        } else if (v[i[0]] == 0 && v[i[1]] == 2 && v[i[2]] == 0) {
-                            const k = [i[0], i[2]];
-                            const randomChoice = k[Math.floor(Math.random() * k.length)];
-                            game[randomChoice] = 2;
-                            buttons[randomChoice].style.backgroundImage = 'url(./images/tic.png)';
-                            buttons[randomChoice].style.backgroundSize = 'cover';
-                            playerTwo = false;
-                            playerOne = true;
-                            playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                            wingame(game);
-                            k = false;
-                            g = false
-                            break;
-            
-                        } else if (v[i[0]] == 2 && v[i[1]] == 0 && v[i[2]] == 0) {
-                            const k = [i[2], i[1]];
-                            const randomChoice = k[Math.floor(Math.random() * k.length)];
-                            game[randomChoice] = 2;
-                            buttons[randomChoice].style.backgroundImage = 'url(./images/tic.png)';
-                            buttons[randomChoice].style.backgroundSize = 'cover';
-                            playerTwo = false;
-                            playerOne = true;
-                            playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                            wingame(game);
-                            k = false;
-                            g = false
-                            break;
-                        }}
-        }
-
-        if(g){
-            /* for (let e = 0; e < winningCombinations.length; e++) {
-                let i = winningCombinations[e];
-
-                if (v[i[0]] == 0 && v[i[1]] == 1 && v[i[2]] == 1) {
-                    game[i[0]] = 2;
-                    buttons[i[0]].style.backgroundImage = 'url(./images/tic.png)';
-                    buttons[i[0]].style.backgroundSize = 'cover';
-                    playerTwo = false;
-                    playerOne = true;
-                    playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                    wingame(game);
-                    k = false;
-                    break;
-    
-                } else if (v[i[0]] == 1 && v[i[1]] == 0 && v[i[2]] == 1) {
-                    game[i[1]] = 2;
-                    buttons[i[1]].style.backgroundImage = 'url(./images/tic.png)';
-                    buttons[i[1]].style.backgroundSize = 'cover';
-                    playerTwo = false;
-                    playerOne = true;
-                    playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                    wingame(game);
-                    k = false;
-                    break;
-    
-                } else if (v[i[0]] == 1 && v[i[1]] == 1 && v[i[2]] == 0) {
-                    game[i[2]] = 2;
-                    buttons[i[2]].style.backgroundImage = 'url(./images/tic.png)';
-                    buttons[i[2]].style.backgroundSize = 'cover';
-                    playerTwo = false;
-                    playerOne = true;
-                    playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
-                    wingame(game);
-                    k = false;
-                    break;
-                }
-                
-        } */
+ 
                 for (let e = 0; e < winningCombinations.length; e++) {
                     let i = winningCombinations[e];
                     if (v[i[0]] == 0 && v[i[1]] == 2 && v[i[2]] == 2) {
@@ -264,7 +54,8 @@ function aiexecute(v) {
                         playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
                         wingame(game);
                         k = false;
-                        
+                        g = false;
+                        r = false;
                         break;
         
                     } else if (v[i[0]] == 2 && v[i[1]] == 0 && v[i[2]] == 2) {
@@ -276,7 +67,8 @@ function aiexecute(v) {
                         playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
                         wingame(game);
                         k = false;
-                      
+                        g = false;
+                        r = false;
                         break;
         
                     } else if (v[i[0]] == 2 && v[i[1]] == 2 && v[i[2]] == 0) {
@@ -288,9 +80,99 @@ function aiexecute(v) {
                         playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
                         wingame(game);
                         k = false;
-                       
+                        g = false;
+                        r = false;
                         break;
                     }}
+
+
+        if(r){
+
+                    for (let e = 0; e < winningCombinations.length; e++) {
+                        let i = winningCombinations[e];
+        
+                        if (v[i[0]] == 0 && v[i[1]] == 1 && v[i[2]] == 1) {
+                            game[i[0]] = 2;
+                            buttons[i[0]].style.backgroundImage = 'url(./images/tic.png)';
+                            buttons[i[0]].style.backgroundSize = 'cover';
+                            playerTwo = false;
+                            playerOne = true;
+                            playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
+                            wingame(game);
+                            k = false;
+                            g = false;
+                            break;
+            
+                        } else if (v[i[0]] == 1 && v[i[1]] == 0 && v[i[2]] == 1) {
+                            game[i[1]] = 2;
+                            buttons[i[1]].style.backgroundImage = 'url(./images/tic.png)';
+                            buttons[i[1]].style.backgroundSize = 'cover';
+                            playerTwo = false;
+                            playerOne = true;
+                            playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
+                            wingame(game);
+                            k = false;
+                            g = false;
+                            break;
+            
+                        } else if (v[i[0]] == 1 && v[i[1]] == 1 && v[i[2]] == 0) {
+                            game[i[2]] = 2;
+                            buttons[i[2]].style.backgroundImage = 'url(./images/tic.png)';
+                            buttons[i[2]].style.backgroundSize = 'cover';
+                            playerTwo = false;
+                            playerOne = true;
+                            playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
+                            wingame(game);
+                            k = false;
+                            g = false;
+                            break;
+                        }
+
+        }}
+
+        if(g){
+            
+                        for (let e = 0; e < winningCombinations.length; e++) {
+                            let i = winningCombinations[e];
+                            if (v[i[0]] == 0 && v[i[1]] == 0 && v[i[2]] == 2) {
+                                const k = [i[0], i[1]];
+                                const randomChoice = k[Math.floor(Math.random() * k.length)];
+                                game[randomChoice] = 2;
+                                buttons[randomChoice].style.backgroundImage = 'url(./images/tic.png)';
+                                buttons[randomChoice].style.backgroundSize = 'cover';
+                                playerTwo = false;
+                                playerOne = true;
+                                playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
+                                wingame(game);
+                                k = false;
+                                break;
+                
+                            } else if (v[i[0]] == 0 && v[i[1]] == 2 && v[i[2]] == 0) {
+                                const k = [i[0], i[2]];
+                                const randomChoice = k[Math.floor(Math.random() * k.length)];
+                                game[randomChoice] = 2;
+                                buttons[randomChoice].style.backgroundImage = 'url(./images/tic.png)';
+                                buttons[randomChoice].style.backgroundSize = 'cover';
+                                playerTwo = false;
+                                playerOne = true;
+                                playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
+                                wingame(game);
+                                k = false;
+                                break;
+                
+                            } else if (v[i[0]] == 2 && v[i[1]] == 0 && v[i[2]] == 0) {
+                                const k = [i[2], i[1]];
+                                const randomChoice = k[Math.floor(Math.random() * k.length)];
+                                game[randomChoice] = 2;
+                                buttons[randomChoice].style.backgroundImage = 'url(./images/tic.png)';
+                                buttons[randomChoice].style.backgroundSize = 'cover';
+                                playerTwo = false;
+                                playerOne = true;
+                                playername.innerHTML = `<h3>${playerOneName}'s turn</h3>`;
+                                wingame(game);
+                                k = false;
+                                break;
+                            }}
         }
 
         if (k) { // If no winning move was found, make a random move
